@@ -1,0 +1,25 @@
+{
+  "": {
+    "dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/DiscordBar.d",
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/DiscordBar.o",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/master.swiftdeps"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/AppDelegate.swift": {
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate.dia"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/WebViewController.swift": {
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController.dia"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/main.swift": {
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main.dia"
+  }
+}

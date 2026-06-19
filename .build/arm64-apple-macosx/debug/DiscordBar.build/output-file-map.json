@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/master.swiftdeps"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/AppDelegate.swift": {
+    "dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppDelegate.d",
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppDelegate.dia"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/AppState.swift": {
+    "dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppState.d",
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppState.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppState~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppState.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/AppState.dia"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/ContentView.swift": {
+    "dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/ContentView.d",
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/ContentView.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/ContentView.dia"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/DiscordSender.swift": {
+    "dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/DiscordSender.d",
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/DiscordSender.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/DiscordSender~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/DiscordSender.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/DiscordSender.dia"
+  },
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/main.swift": {
+    "dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/main.d",
+    "object": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/main.swift.o",
+    "swiftmodule": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/main.swiftdeps",
+    "diagnostics": "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/debug/DiscordBar.build/main.dia"
+  }
+}

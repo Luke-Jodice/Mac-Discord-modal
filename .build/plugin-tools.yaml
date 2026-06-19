@@ -1,0 +1,66 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "DiscordBar-arm64-apple-macosx26.0-release.exe": ["<DiscordBar-arm64-apple-macosx26.0-release.exe>"]
+  "DiscordBar-arm64-apple-macosx26.0-release.module": ["<DiscordBar-arm64-apple-macosx26.0-release.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<DiscordBar-arm64-apple-macosx26.0-release.exe>","<DiscordBar-arm64-apple-macosx26.0-release.module>"]
+  "test": ["<DiscordBar-arm64-apple-macosx26.0-release.exe>","<DiscordBar-arm64-apple-macosx26.0-release.module>"]
+default: "main"
+nodes:
+  "/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/AppDelegate.swift","/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/WebViewController.swift","/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/main.swift"]
+    outputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/sources"]
+    description: "Write auxiliary file /Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/sources"
+
+  "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main.swift.o"]
+    outputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.product/Objects.LinkFileList"
+
+  "/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<DiscordBar-arm64-apple-macosx26.0-release.exe>":
+    tool: phony
+    inputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar"]
+    outputs: ["<DiscordBar-arm64-apple-macosx26.0-release.exe>"]
+
+  "<DiscordBar-arm64-apple-macosx26.0-release.module>":
+    tool: phony
+    inputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/Modules/DiscordBar.swiftmodule"]
+    outputs: ["<DiscordBar-arm64-apple-macosx26.0-release.module>"]
+
+  "C.DiscordBar-arm64-apple-macosx26.0-release.exe":
+    tool: shell
+    inputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.product/Objects.LinkFileList"]
+    outputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar"]
+    description: "Linking ./.build/arm64-apple-macosx/release/DiscordBar"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release","-o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar","-module-name","DiscordBar","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-dead_strip","-Xlinker","-alias","-Xlinker","_DiscordBar_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.DiscordBar-arm64-apple-macosx26.0-release.module":
+    tool: shell
+    inputs: ["/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/AppDelegate.swift","/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/WebViewController.swift","/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/main.swift","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/sources"]
+    outputs: ["/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/AppDelegate.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/WebViewController.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/main.swift.o","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/Modules/DiscordBar.swiftmodule"]
+    description: "Compiling Swift Module 'DiscordBar' (3 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","DiscordBar","-emit-dependencies","-emit-module","-emit-module-path","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/Modules/DiscordBar.swiftmodule","-output-file-map","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/output-file-map.json","-whole-module-optimization","-num-threads","8","-c","@/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/DiscordBar.build/sources","-I","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx13.0","-whole-module-optimization","-num-threads","8","-serialize-diagnostics","-O","-j8","-DSWIFT_PACKAGE","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/ljodice/Code/Mactoolbaritem/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","DiscordBar_main","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","mactoolbaritem"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/ljodice/Code/Mactoolbaritem/Sources/DiscordBar/","/Users/ljodice/Code/Mactoolbaritem/Package.swift","/Users/ljodice/Code/Mactoolbaritem/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

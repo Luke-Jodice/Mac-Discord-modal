@@ -1,0 +1,13 @@
+# macOS Finder metadata
+.DS_Store
+
+# Swift Package Manager build output
+/.build/
+.swiftpm/
+
+# Built application bundle (regenerate with ./build-app.sh)
+/DiscordBar.app/
+
+# Xcode (if the package is ever opened there)
+xcuserdata/
+DerivedData/
